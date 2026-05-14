@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safari Experience | Majestic Trails</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <!-- Navbar (Same as index) -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">🐫 MAJESTIC TRAILS</a>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="index.html" class="active">Home</a>
+                    <div class="dropdown">
+                        <a href="index.html" class="dropdown-item">Adventure Home</a>
+                        <a href="home-2.html" class="dropdown-item" style="color: var(--accent);">Safari Home</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="camel-profiles.html">Camels</a></li>
+                <li class="nav-item"><a href="ride-packages.html">Ride Packages</a></li>
+                <li class="nav-item"><a href="farm-visits.html">Farm Visits</a></li>
+                <li class="nav-item"><a href="blog.html">Blog</a></li>
+                <li class="nav-item"><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="theme-switch">
+                    <input type="checkbox" id="theme-toggle" class="d-none">
+                    <label for="theme-toggle" style="cursor:pointer; font-size: 1.2rem;">🌓</label>
+                </div>
+                <a href="signup.html" class="btn btn-primary ms-2">Sign Up</a>
+                <a href="login.html" class="btn btn-outline d-none d-md-flex">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Safari Style -->
+    <header class="hero" style="height: 80vh;">
+        <img src="assets/images/ride-1.png" alt="Safari Experience" class="hero-img">
+        <div class="hero-overlay" style="background: rgba(0,0,0,0.4);"></div>
+        <div class="container text-center">
+            <div class="hero-content mx-auto">
+                <h1 class="hero-title">A Safari Into the Heart of Nature</h1>
+                <p class="lead mb-4">Immersive animal encounters and desert treks designed for the curious soul.</p>
+                <div class="hero-btns">
+                    <a href="booking.html" class="btn btn-primary">Plan Your Safari</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-md-3">
+                    <div class="glass-panel py-5 fade-up">
+                        <h2 class="display-4 text-primary">25+</h2>
+                        <p class="text-uppercase fw-bold">Happy Camels</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="glass-panel py-5 fade-up">
+                        <h2 class="display-4 text-primary">15k</h2>
+                        <p class="text-uppercase fw-bold">Annual Visitors</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="glass-panel py-5 fade-up">
+                        <h2 class="display-4 text-primary">12</h2>
+                        <p class="text-uppercase fw-bold">Rare Species</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="glass-panel py-5 fade-up">
+                        <h2 class="display-4 text-primary">100%</h2>
+                        <p class="text-uppercase fw-bold">Ethical Rating</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row section-header mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-5">Captured Moments</h2>
+                    <p>Glimpses of the adventure that awaits you.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <img src="assets/images/encounter-1.png" class="rounded-4 hover-lift w-100 shadow" alt="Gallery">
+                </div>
+                <div class="col-md-4">
+                    <img src="assets/images/camel-1.png" class="rounded-4 hover-lift w-100 shadow" alt="Gallery">
+                </div>
+                <div class="col-md-4">
+                    <img src="assets/images/farm-1.png" class="rounded-4 hover-lift w-100 shadow" alt="Gallery">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 footer-col">
+                    <a href="index.html" class="logo mb-4">🐫 MAJESTIC TRAILS</a>
+                    <p class="opacity-75">Dedicated to ethical animal encounters and creating lifelong memories for families and explorers.</p>
+                </div>
+                <div class="col-lg-2 footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="camel-profiles.html">Camel Profiles</a></li>
+                        <li><a href="ride-packages.html">Ride Packages</a></li>
+                        <li><a href="farm-visits.html">Farm Visits</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 footer-col">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="blog.html">Our Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="login.html">Member Portal</a></li>
+                        <li><a href="signup.html">Join the Trail</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 footer-col">
+                    <h4>Newsletter</h4>
+                    <p class="opacity-75 mb-3">Get the latest trail updates and farm news.</p>
+                    <div class="d-flex gap-2">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                        <button class="btn btn-primary">Join</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Majestic Trails. All Rights Reserved. Ethical Animal Tourism certified.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+</body>
+</html>

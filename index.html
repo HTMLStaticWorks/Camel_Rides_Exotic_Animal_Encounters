@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Majestic Trails | Camel Rides & Exotic Animal Encounters</title>
+    <meta name="description"
+        content="Experience ethical camel rides, exotic animal encounters, and educational farm visits. Join us for a premium family adventure.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">🐫 MAJESTIC TRAILS</a>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="index.html" class="active">Home</a>
+                    <div class="dropdown">
+                        <a href="index.html" class="dropdown-item">Adventure Home</a>
+                        <a href="home-2.html" class="dropdown-item">Safari Home</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="camel-profiles.html">Camels</a></li>
+                <li class="nav-item"><a href="ride-packages.html">Ride Packages</a></li>
+                <li class="nav-item"><a href="farm-visits.html">Farm Visits</a></li>
+                <li class="nav-item"><a href="blog.html">Blog</a></li>
+                <li class="nav-item"><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="nav-toggles">
+                    <button id="rtl-toggle" class="nav-toggle-btn" title="Toggle RTL">RTL</button>
+                    <button id="theme-toggle" class="nav-toggle-btn" title="Toggle Theme">🌓</button>
+                </div>
+                <a href="signup.html" class="btn btn-primary ms-2">Sign Up</a>
+                <a href="login.html" class="btn btn-outline d-none d-md-flex">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <img src="assets/images/hero-1.png" alt="Majestic Camels" class="hero-img">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Discover the Magic of the High Desert</h1>
+                <p class="lead mb-4">Ethical camel rides and exotic animal encounters designed for families, schools,
+                    and adventurers.</p>
+                <div class="hero-btns">
+                    <a href="booking.html" class="btn btn-primary animate-pulse">Book Your Experience</a>
+                    <a href="ride-packages.html" class="btn btn-outline" style="color:white; border-color:white;">View
+                        Packages</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row text-center mb-5 section-header">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-5">Unforgettable Experiences</h2>
+                    <p class="text-secondary">We pride ourselves on ethical animal care and professional guidance for
+                        every visitor.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card fade-up">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/ride-1.png" alt="Camel Trekking" class="card-img">
+                        </div>
+                        <div class="card-content text-center">
+                            <span class="card-tag">Signature</span>
+                            <h3>Sunset Camel Treks</h3>
+                            <p>Experience the tranquility of the dunes as the sun sets over the horizon.</p>
+                            <a href="ride-packages.html" class="btn btn-outline mt-3">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card fade-up">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/encounter-1.png" alt="Animal Interaction" class="card-img">
+                        </div>
+                        <div class="card-content text-center">
+                            <span class="card-tag">Family</span>
+                            <h3>Exotic Encounters</h3>
+                            <p>Get up close and personal with alpacas, lemurs, and exotic birds.</p>
+                            <a href="farm-visits.html" class="btn btn-outline mt-3">Explore Farm</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card fade-up">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/farm-1.png" alt="Education" class="card-img">
+                        </div>
+                        <div class="card-content text-center">
+                            <span class="card-tag">Schools</span>
+                            <h3>Education Programs</h3>
+                            <p>Guided learning sessions focused on wildlife conservation and biology.</p>
+                            <a href="education-programs.html" class="btn btn-outline mt-3">See Programs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Camels -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="reveal-img">
+                        <img src="assets/images/camel-1.png" alt="Our Camels" class="rounded-4 shadow-lg">
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <h2 class="display-5">Meet Our Majestic Residents</h2>
+                    <p class="mb-4">Our camels are part of our family. Each one has a unique personality and receives
+                        the highest standard of ethical care and enrichment.</p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-2">✨ <strong>Ethical Care:</strong> Daily enrichment and premium nutrition.</li>
+                        <li class="mb-2">✨ <strong>Expert Guides:</strong> Professional handlers with years of
+                            experience.</li>
+                        <li class="mb-2">✨ <strong>Safe Environment:</strong> Controlled interactions for all ages.</li>
+                    </ul>
+                    <a href="camel-profiles.html" class="btn btn-primary">View Camel Profiles</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-5">What Our Explorers Say</h2>
+                    <p class="lead">Real stories from real travelers who have shared the trail with our majestic herd.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card fade-up">
+                        <div class="stars mb-3">⭐⭐⭐⭐⭐</div>
+                        <p class="mb-4">"An absolute highlight of our desert trip! The camels are so well-cared for, and the sunset views were breathtaking. A must-do for families."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="user-avatar">SC</div>
+                            <div>
+                                <h5 class="mb-0">Sarah Collins</h5>
+                                <small class="text-secondary">Family Traveler</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card fade-up" style="animation-delay: 0.1s;">
+                        <div class="stars mb-3">⭐⭐⭐⭐⭐</div>
+                        <p class="mb-4">"The educational farm visit was incredible. My kids loved meeting the lemurs, and the staff's passion for conservation is truly inspiring."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="user-avatar">MR</div>
+                            <div>
+                                <h5 class="mb-0">Mark Reynolds</h5>
+                                <small class="text-secondary">School Teacher</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card fade-up" style="animation-delay: 0.2s;">
+                        <div class="stars mb-3">⭐⭐⭐⭐⭐</div>
+                        <p class="mb-4">"Highly professional and ethical. The sunrise coffee trek was the most peaceful experience I've had. Worth every penny for the quality."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="user-avatar">EJ</div>
+                            <div>
+                                <h5 class="mb-0">Elena Jovic</h5>
+                                <small class="text-secondary">Solo Explorer</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-5">Frequently Asked Questions</h2>
+                    <p class="lead">Everything you need to know about our treks, farm visits, and animal care policies.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="faq-container">
+                        <div class="faq-item active">
+                            <div class="faq-question">
+                                <span>Are camel rides safe for young children?</span>
+                                <div class="faq-icon-wrapper"><i class="fas fa-chevron-down"></i></div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes! We have specialized saddles for children and our guides walk alongside younger riders at all times. Safety is our top priority.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>What should I wear for my trek?</span>
+                                <div class="faq-icon-wrapper"><i class="fas fa-chevron-down"></i></div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We recommend comfortable, loose-fitting clothing and closed-toe shoes. A hat and sunscreen are essential for the desert sun.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>How do you ensure the camels are well treated?</span>
+                                <div class="faq-icon-wrapper"><i class="fas fa-chevron-down"></i></div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We follow a strict ethical care policy. Our camels work limited hours, receive daily health checks, and have full rest days in between treks.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Do I need to book in advance?</span>
+                                <div class="faq-icon-wrapper"><i class="fas fa-chevron-down"></i></div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we highly recommend booking at least 48 hours in advance as our popular sunset and sunrise treks fill up quickly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking CTA -->
+    <section class="cta-section">
+        <img src="assets/images/hero-1.png" alt="Adventure Background" class="cta-bg">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="cta-card fade-up">
+                        <h2 class="display-5 mb-4">Ready for Your Next Adventure?</h2>
+                        <p class="lead mb-5 opacity-90">Join over 10,000 happy visitors who have shared magical moments with our majestic animals.</p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="ride-packages.html" class="btn btn-primary btn-lg px-5">View Packages</a>
+                            <a href="contact.html" class="btn btn-outline btn-lg px-5" style="border-color: white; color: white;">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 footer-col">
+                    <a href="index.html" class="logo mb-4">🐫 MAJESTIC TRAILS</a>
+                    <p class="opacity-75">Dedicated to ethical animal encounters and creating lifelong memories for
+                        families and explorers.</p>
+                </div>
+                <div class="col-lg-2 footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="camel-profiles.html">Camel Profiles</a></li>
+                        <li><a href="ride-packages.html">Ride Packages</a></li>
+                        <li><a href="farm-visits.html">Farm Visits</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 footer-col">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="blog.html">Our Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="login.html">Member Portal</a></li>
+                        <li><a href="signup.html">Join the Trail</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 footer-col">
+                    <h4>Newsletter</h4>
+                    <p class="opacity-75 mb-3">Get the latest trail updates and farm news.</p>
+                    <div class="d-flex gap-2">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                        <button class="btn btn-primary">Join</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Majestic Trails. All Rights Reserved. Ethical Animal Tourism certified.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/rtl-toggle.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+</body>
+
+</html>

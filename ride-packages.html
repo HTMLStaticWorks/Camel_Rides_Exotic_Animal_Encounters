@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride Packages | Majestic Trails</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">🐫 MAJESTIC TRAILS</a>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="index.html">Home</a>
+                    <div class="dropdown">
+                        <a href="index.html" class="dropdown-item">Adventure Home</a>
+                        <a href="home-2.html" class="dropdown-item">Safari Home</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="camel-profiles.html">Camels</a></li>
+                <li class="nav-item"><a href="ride-packages.html" class="active">Ride Packages</a></li>
+                <li class="nav-item"><a href="farm-visits.html">Farm Visits</a></li>
+                <li class="nav-item"><a href="blog.html">Blog</a></li>
+                <li class="nav-item"><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="nav-toggles">
+                    <button id="rtl-toggle" class="nav-toggle-btn" title="Toggle RTL">RTL</button>
+                    <button id="theme-toggle" class="nav-toggle-btn" title="Toggle Theme">🌓</button>
+                </div>
+                <a href="signup.html" class="btn btn-primary ms-2">Sign Up</a>
+                <a href="login.html" class="btn btn-outline d-none d-md-flex">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="section-padding" style="background: var(--bg); padding-top: 150px;">
+        <div class="container text-center">
+            <h1 class="display-4">Adventure Packages</h1>
+            <p class="lead">Choose the perfect trek for your journey.</p>
+        </div>
+    </header>
+
+    <section class="section-padding pt-0">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Package 1 -->
+                <div class="col-lg-4">
+                    <div class="glass-panel text-center h-100 fade-up">
+                        <div class="mb-4">
+                            <span class="icon" style="font-size: 3rem;">🌅</span>
+                        </div>
+                        <h2 class="h3">Sunset Trek</h2>
+                        <p class="text-secondary mb-4">A magical 60-minute journey through the dunes as the sun goes
+                            down.</p>
+                        <div class="display-5 fw-bold text-primary mb-4">$75 <small class="text-secondary"
+                                style="font-size: 1rem;">/ person</small></div>
+                        <ul class="list-unstyled mb-5">
+                            <li class="mb-2">✓ 60 Minute Guided Ride</li>
+                            <li class="mb-2">✓ Professional Photography</li>
+                            <li class="mb-2">✓ Traditional Tea & Dates</li>
+                            <li class="mb-2">✓ Safety Gear Included</li>
+                        </ul>
+                        <a href="#booking-form" class="btn btn-primary w-100">Book Sunset Trek</a>
+                    </div>
+                </div>
+                <!-- Package 2 -->
+                <div class="col-lg-4">
+                    <div class="glass-panel text-center h-100 fade-up" style="border: 2px solid var(--accent);">
+                        <div class="mb-4">
+                            <span class="icon" style="font-size: 3rem;">👨‍👩‍👧‍👦</span>
+                        </div>
+                        <h2 class="h3">Family Adventure</h2>
+                        <p class="text-secondary mb-4">Designed for families with children. Gentle pace and educational
+                            stops.</p>
+                        <div class="display-5 fw-bold text-primary mb-4">$199 <small class="text-secondary"
+                                style="font-size: 1rem;">/ family of 4</small></div>
+                        <ul class="list-unstyled mb-5">
+                            <li class="mb-2">✓ 45 Minute Guided Ride</li>
+                            <li class="mb-2">✓ Animal Feeding Session</li>
+                            <li class="mb-2">✓ Educational Mini-Tour</li>
+                            <li class="mb-2">✓ Kids' Activity Packs</li>
+                        </ul>
+                        <a href="#booking-form" class="btn btn-primary w-100">Book Family Pack</a>
+                    </div>
+                </div>
+                <!-- Package 3 -->
+                <div class="col-lg-4">
+                    <div class="glass-panel text-center h-100 fade-up">
+                        <div class="mb-4">
+                            <span class="icon" style="font-size: 3rem;">🏜️</span>
+                        </div>
+                        <h2 class="h3">Desert Expedition</h2>
+                        <p class="text-secondary mb-4">A half-day immersive experience deep into the trail networks.</p>
+                        <div class="display-5 fw-bold text-primary mb-4">$120 <small class="text-secondary"
+                                style="font-size: 1rem;">/ person</small></div>
+                        <ul class="list-unstyled mb-5">
+                            <li class="mb-2">✓ 3 Hour Deep Trek</li>
+                            <li class="mb-2">✓ Guided Nature Walk</li>
+                            <li class="mb-2">✓ Picnic Lunch Included</li>
+                            <li class="mb-2">✓ Exclusive Trail Access</li>
+                        </ul>
+                        <a href="#booking-form" class="btn btn-primary w-100">Book Expedition</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section Integration -->
+    <section id="booking-form" class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center mb-5 fade-up">
+                <h2 class="display-4">Secure Your Spot</h2>
+                <p class="lead">Complete the form below to book your majestic experience directly.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="glass-panel fade-up">
+                        <form action="#">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">First Name</label>
+                                        <input type="text" class="form-control" placeholder="Enter first name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" placeholder="Enter last name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Experience Type</label>
+                                        <select class="form-control">
+                                            <option>Sunset Camel Trek</option>
+                                            <option>Family Adventure</option>
+                                            <option>Desert Expedition</option>
+                                            <option>Farm Entry & Animal Encounter</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Preferred Date</label>
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Number of Guests</label>
+                                        <input type="number" class="form-control" min="1" value="1">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" placeholder="you@example.com">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="form-label">Special Requests (Health/Dietary)</label>
+                                        <textarea class="form-control" rows="4"
+                                            placeholder="Tell us anything we should know..."></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">Proceed to
+                                        Confirmation</button>
+                                    <p class="small text-secondary mt-3">No payment required at this step. We'll verify
+                                        availability and contact you.</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 footer-col">
+                    <a href="index.html" class="logo text-white mb-4">🐫 MAJESTIC TRAILS</a>
+                    <p class="opacity-75">Dedicated to ethical animal encounters and creating lifelong memories for
+                        families and explorers.</p>
+                </div>
+                <div class="col-lg-2 footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="camel-profiles.html">Camel Profiles</a></li>
+                        <li><a href="ride-packages.html">Ride Packages</a></li>
+                        <li><a href="farm-visits.html">Farm Visits</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 footer-col">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="blog.html">Our Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="login.html">Member Portal</a></li>
+                        <li><a href="signup.html">Join the Trail</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 footer-col">
+                    <h4>Newsletter</h4>
+                    <p class="opacity-75 mb-3">Get the latest trail updates and farm news.</p>
+                    <div class="d-flex gap-2">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                        <button class="btn btn-primary">Join</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Majestic Trails. All Rights Reserved. Ethical Animal Tourism certified.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/theme-toggle.js"></script>
+    <script src="assets/js/rtl-toggle.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
