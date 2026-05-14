@@ -603,3 +603,14 @@ img {
     padding-bottom: 35px;
     max-height: 300px;
 }
+
+/* Navbar Dropdown Icon */
+.nav-item:hover .fa-chevron-down {
+    transform: rotate(180deg);
+    color: var(--primary);
+    transition: transform 0.3s ease;
+} 
+
+.fa-chevron-down {
+    transition: transform 0.3s ease;
+}
