@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="assets/css/animations.css">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -31,6 +35,18 @@
                 <li class="nav-item"><a href="farm-visits.html">Farm Visits</a></li>
                 <li class="nav-item"><a href="blog.html" class="active">Blog</a></li>
                 <li class="nav-item"><a href="contact.html">Contact</a></li>
+                
+                <!-- Mobile Only Actions -->
+                <li class="mobile-nav-actions">
+                    <div class="mobile-nav-toggles">
+                        <button id="rtl-toggle-mobile" class="nav-toggle-btn" title="Toggle RTL">RTL</button>
+                        <div class="theme-switch">
+                            <input type="checkbox" id="theme-toggle-mobile" class="d-none">
+                            <label for="theme-toggle-mobile" style="cursor:pointer; font-size: 1.2rem;">🌓 Theme</label>
+                        </div>
+                    </div>
+                    <a href="signup.html" class="btn btn-primary w-100">Sign Up</a>
+                </li>
             </ul>
             <div class="nav-right">
                 <div class="nav-toggles">
@@ -40,11 +56,14 @@
                 <a href="signup.html" class="btn btn-primary ms-2">Sign Up</a>
                 <a href="login.html" class="btn btn-outline d-none d-md-flex">Login</a>
             </div>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
-    <header class="section-padding" style="background: var(--bg); padding-top: 150px;">
-        <div class="container text-center">
+    <header class="hero-section">
+        <div class="hero-content">
             <h1 class="display-4">Trail Tales</h1>
             <p class="lead">Stories from the desert, animal care tips, and conservation news.</p>
         </div>
@@ -60,93 +79,40 @@
                             <img src="assets/images/hero-1.png" alt="Blog Post" class="card-img">
                         </div>
                         <div class="card-content">
-                            <span class="card-tag">Conservation</span>
-                            <h4>Ethical Camel Care: Behind the Scenes</h4>
-                            <p class="small text-secondary mb-3">May 10, 2026 • 5 min read</p>
-                            <p>Discover how we maintain the highest standards of animal welfare for our majestic herd.</p>
-                            <a href="blog-details.html" class="text-primary fw-bold mt-3 d-inline-block">Read More →</a>
+                            <p class="text-primary small mb-2">Conservation | March 12, 2026</p>
+                            <h3>The Secret Language of Camels</h3>
+                            <p>How our trainers communicate with the herd using subtle cues and trust-based signals.</p>
+                            <a href="#" class="btn-link mt-3 d-inline-block">Read More <i class="fas fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
                 <!-- Blog 2 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="card fade-up">
+                    <div class="card fade-up" style="animation-delay: 0.1s;">
                         <div class="card-img-wrapper">
-                            <img src="assets/images/encounter-1.png" alt="Blog Post" class="card-img">
+                            <img src="assets/images/camel-2.png" alt="Blog Post" class="card-img">
                         </div>
                         <div class="card-content">
-                            <span class="card-tag">Education</span>
-                            <h4>Preparing Your Kids for Their First Camel Ride</h4>
-                            <p class="small text-secondary mb-3">May 05, 2026 • 4 min read</p>
-                            <p>Tips and tricks to ensure your little explorers have a comfortable and fun experience.</p>
-                            <a href="blog-kids.html" class="text-primary fw-bold mt-3 d-inline-block">Read More →</a>
+                            <p class="text-primary small mb-2">Adventure | March 05, 2026</p>
+                            <h3>Packing for Your First Trek</h3>
+                            <p>Everything you need to know about clothing, sunscreen, and staying hydrated on the trail.</p>
+                            <a href="#" class="btn-link mt-3 d-inline-block">Read More <i class="fas fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
                 <!-- Blog 3 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="card fade-up">
-                        <div class="card-img-wrapper">
-                            <img src="assets/images/animal-1.png" alt="Blog Post" class="card-img">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-tag">Nature</span>
-                            <h4>The Incredible World of Lemurs</h4>
-                            <p class="small text-secondary mb-3">April 28, 2026 • 6 min read</p>
-                            <p>Learn about our curious lemur colony and their unique social structures.</p>
-                            <a href="blog-lemurs.html" class="text-primary fw-bold mt-3 d-inline-block">Read More →</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog 4 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card fade-up">
-                        <div class="card-img-wrapper">
-                            <img src="assets/images/camel-2.png" alt="Blog Post" class="card-img">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-tag">History</span>
-                            <h4>The Ancient Art of Camel Trekking</h4>
-                            <p class="small text-secondary mb-3">April 20, 2026 • 7 min read</p>
-                            <p>Exploring the historical significance of camels as the ships of the desert.</p>
-                            <a href="blog-history.html" class="text-primary fw-bold mt-3 d-inline-block">Read More →</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog 5 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card fade-up">
+                    <div class="card fade-up" style="animation-delay: 0.2s;">
                         <div class="card-img-wrapper">
                             <img src="assets/images/farm-1.png" alt="Blog Post" class="card-img">
                         </div>
                         <div class="card-content">
-                            <span class="card-tag">Tips</span>
-                            <h4>Desert Essentials: What to Pack</h4>
-                            <p class="small text-secondary mb-3">April 15, 2026 • 4 min read</p>
-                            <p>A comprehensive guide on gear and clothing for your majestic trail adventure.</p>
-                            <a href="blog-packing.html" class="text-primary fw-bold mt-3 d-inline-block">Read More →</a>
+                            <p class="text-primary small mb-2">Farm Life | Feb 28, 2026</p>
+                            <h3>Meet Our Newest Giant Tortoise</h3>
+                            <p>Welcoming 'Barnaby' to the family—learn about his history and how he's settling in.</p>
+                            <a href="#" class="btn-link mt-3 d-inline-block">Read More <i class="fas fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
-                </div>
-                <!-- Blog 6 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card fade-up">
-                        <div class="card-img-wrapper">
-                            <img src="assets/images/camel-1.png" alt="Blog Post" class="card-img">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-tag">Community</span>
-                            <h4>Volunteer Stories: Life at the Farm</h4>
-                            <p class="small text-secondary mb-3">April 10, 2026 • 8 min read</p>
-                            <p>Meet the passionate people who help care for our animals every day.</p>
-                            <a href="blog-volunteers.html" class="text-primary fw-bold mt-3 d-inline-block">Read More →</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-12 text-center">
-                    <button class="btn btn-outline">Load More Stories</button>
                 </div>
             </div>
         </div>
@@ -162,6 +128,7 @@
                 </div>
                 <div class="col-lg-2 footer-col">
                     <h4>Quick Links</h4>
+                    <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="camel-profiles.html">Camel Profiles</a></li>
                         <li><a href="ride-packages.html">Ride Packages</a></li>
@@ -195,9 +162,7 @@
     <script src="assets/js/theme-toggle.js"></script>
     <script src="assets/js/rtl-toggle.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
 </body>
 
 </html>
-
-
-

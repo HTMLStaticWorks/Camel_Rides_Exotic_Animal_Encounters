@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="assets/css/animations.css">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -31,6 +35,18 @@
                 <li class="nav-item"><a href="farm-visits.html" class="active">Farm Visits</a></li>
                 <li class="nav-item"><a href="blog.html">Blog</a></li>
                 <li class="nav-item"><a href="contact.html">Contact</a></li>
+                
+                <!-- Mobile Only Actions -->
+                <li class="mobile-nav-actions">
+                    <div class="mobile-nav-toggles">
+                        <button id="rtl-toggle-mobile" class="nav-toggle-btn" title="Toggle RTL">RTL</button>
+                        <div class="theme-switch">
+                            <input type="checkbox" id="theme-toggle-mobile" class="d-none">
+                            <label for="theme-toggle-mobile" style="cursor:pointer; font-size: 1.2rem;">🌓 Theme</label>
+                        </div>
+                    </div>
+                    <a href="signup.html" class="btn btn-primary w-100">Sign Up</a>
+                </li>
             </ul>
             <div class="nav-right">
                 <div class="nav-toggles">
@@ -40,18 +56,17 @@
                 <a href="signup.html" class="btn btn-primary ms-2">Sign Up</a>
                 <a href="login.html" class="btn btn-outline d-none d-md-flex">Login</a>
             </div>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
-    <header class="section-padding" style="background: var(--bg); padding-top: 150px;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="display-4">Visit the Farm</h1>
-                    <p class="lead">Not just rides—come and meet our entire exotic family in a beautiful outdoor
-                        setting.</p>
-                </div>
-            </div>
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1 class="display-4">Visit the Farm</h1>
+            <p class="lead">Not just rides—come and meet our entire exotic family in a beautiful outdoor
+                setting.</p>
         </div>
     </header>
 
@@ -96,6 +111,96 @@
         </div>
     </section>
 
+    <!-- Educational Add-ons Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header mb-5">
+                <h2 class="display-5">Educational Add-ons</h2>
+                <p class="text-secondary">Enhance your visit with deep-dive learning experiences.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm fade-up">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon mb-4" style="font-size: 2.5rem;">👨‍🏫</div>
+                            <h4>Guided Biology Tour</h4>
+                            <p class="small text-secondary">A 45-minute tour with our head zoologist focusing on desert adaptation and species conservation.</p>
+                            <span class="badge bg-primary-subtle text-primary p-2 mt-2">+$10 per person</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm fade-up" style="animation-delay: 0.1s;">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon mb-4" style="font-size: 2.5rem;">🍎</div>
+                            <h4>Ethical Feeding Session</h4>
+                            <p class="small text-secondary">Learn about dietary needs and participate in supervised feeding of our alpacas and tortoises.</p>
+                            <span class="badge bg-primary-subtle text-primary p-2 mt-2">+$8 per person</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm fade-up" style="animation-delay: 0.2s;">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon mb-4" style="font-size: 2.5rem;">📸</div>
+                            <h4>Animal Photography Lab</h4>
+                            <p class="small text-secondary">A workshop on how to capture stunning wildlife photos without disturbing the animals.</p>
+                            <span class="badge bg-primary-subtle text-primary p-2 mt-2">+$15 per person</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Guidelines Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="section-header text-start mb-5" style="align-items: flex-start; text-align: left;">
+                        <h2 class="display-5">Safety Guidelines</h2>
+                        <p class="text-secondary">Your safety and the well-being of our animals are our top priorities.</p>
+                    </div>
+                    <div class="safety-list">
+                        <div class="d-flex gap-4 mb-4 fade-up">
+                            <div class="icon-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; border-radius: 50%; flex-shrink: 0;">
+                                <i class="fas fa-hand-holding"></i>
+                            </div>
+                            <div>
+                                <h5>Gentle Interactions</h5>
+                                <p class="small text-secondary mb-0">Always approach animals from the side and never attempt to touch their faces without a guide's permission.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-4 mb-4 fade-up" style="animation-delay: 0.1s;">
+                            <div class="icon-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; border-radius: 50%; flex-shrink: 0;">
+                                <i class="fas fa-volume-mute"></i>
+                            </div>
+                            <div>
+                                <h5>Quiet Atmosphere</h5>
+                                <p class="small text-secondary mb-0">Loud noises can startle exotic species. We ask all visitors to maintain a calm and quiet demeanor.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-4 fade-up" style="animation-delay: 0.2s;">
+                            <div class="icon-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; border-radius: 50%; flex-shrink: 0;">
+                                <i class="fas fa-shoe-prints"></i>
+                            </div>
+                            <div>
+                                <h5>Stay on Designated Paths</h5>
+                                <p class="small text-secondary mb-0">Our farm is a delicate ecosystem. Please remain on marked trails to protect native flora and fauna.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1 mt-5 mt-lg-0">
+                    <div class="reveal-img">
+                        <img src="assets/images/animal-1.png" alt="Safety Briefing" class="rounded-4 shadow-lg w-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <div class="row g-5">
@@ -106,6 +211,7 @@
                 </div>
                 <div class="col-lg-2 footer-col">
                     <h4>Quick Links</h4>
+                    <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="camel-profiles.html">Camel Profiles</a></li>
                         <li><a href="ride-packages.html">Ride Packages</a></li>
@@ -139,9 +245,7 @@
     <script src="assets/js/theme-toggle.js"></script>
     <script src="assets/js/rtl-toggle.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
 </body>
 
 </html>
-
-
-

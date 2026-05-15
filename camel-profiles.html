@@ -11,6 +11,166 @@
     <link rel="stylesheet" href="assets/css/animations.css">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+        /* Section-specific Premium Styles */
+        .caretaker-card {
+            background: var(--surface);
+            border-radius: 30px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        .caretaker-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+        }
+        .caretaker-img-box {
+            height: 350px;
+            position: relative;
+            overflow: hidden;
+        }
+        .caretaker-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+        .caretaker-card:hover .caretaker-img-box img {
+            transform: scale(1.1);
+        }
+        .caretaker-info {
+            padding: 35px;
+            position: relative;
+            background: var(--surface);
+        }
+        .caretaker-role {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary);
+            font-weight: 700;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .caretaker-social {
+            position: absolute;
+            top: -25px;
+            right: 35px;
+            display: flex;
+            gap: 10px;
+        }
+        .social-circle {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .social-circle:hover {
+            background: var(--accent);
+            transform: scale(1.1);
+        }
+
+        .sponsorship-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/ride-1.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: white;
+            border-radius: 50px;
+            padding: 100px 50px;
+            margin: 0 20px;
+        }
+        .tier-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 45px;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        .tier-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--accent);
+            transform: translateY(-10px);
+        }
+        .tier-card.featured {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .tier-card.featured .text-secondary,
+        .tier-card.featured .opacity-75 {
+            color: rgba(255, 255, 255, 0.8) !important;
+        }
+        .tier-card.featured .tier-price span {
+            color: rgba(255, 255, 255, 0.6) !important;
+        }
+        .tier-card.featured .btn-primary {
+            background: white;
+            color: var(--primary);
+            border: none;
+        }
+        .tier-card.featured .btn-primary:hover {
+            background: var(--accent);
+            color: white;
+        }
+        .tier-card.featured i {
+            color: white !important;
+        }
+        .tier-price {
+            font-size: 3rem;
+            font-weight: 800;
+            margin: 20px 0;
+        }
+        .tier-price span {
+            font-size: 1rem;
+            opacity: 0.7;
+            font-weight: 400;
+        }
+        .tier-perks li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+        }
+        .featured-tag {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: white;
+            padding: 5px 25px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .sponsorship-section .btn-outline {
+            border: 2px solid rgba(255, 255, 255, 0.4) !important;
+            color: white !important;
+            backdrop-filter: blur(5px);
+        }
+        .sponsorship-section .btn-outline:hover {
+            background: white !important;
+            color: var(--primary) !important;
+            border-color: white !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -31,6 +191,18 @@
                 <li class="nav-item"><a href="farm-visits.html">Farm Visits</a></li>
                 <li class="nav-item"><a href="blog.html">Blog</a></li>
                 <li class="nav-item"><a href="contact.html">Contact</a></li>
+                
+                <!-- Mobile Only Actions -->
+                <li class="mobile-nav-actions">
+                    <div class="mobile-nav-toggles">
+                        <button id="rtl-toggle-mobile" class="nav-toggle-btn" title="Toggle RTL">RTL</button>
+                        <div class="theme-switch">
+                            <input type="checkbox" id="theme-toggle-mobile" class="d-none">
+                            <label for="theme-toggle-mobile" style="cursor:pointer; font-size: 1.2rem;">🌓 Theme</label>
+                        </div>
+                    </div>
+                    <a href="signup.html" class="btn btn-primary w-100">Sign Up</a>
+                </li>
             </ul>
             <div class="nav-right">
                 <div class="nav-toggles">
@@ -40,25 +212,24 @@
                 <a href="signup.html" class="btn btn-primary ms-2">Sign Up</a>
                 <a href="login.html" class="btn btn-outline d-none d-md-flex">Login</a>
             </div>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
-    <header class="section-padding" style="background: var(--bg); padding-top: 150px;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="display-4">Meet the Herd</h1>
-                    <p class="lead">Our camels are our partners. Get to know the unique personalities that make every
-                        ride special.</p>
-                </div>
-            </div>
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1 class="display-4">Meet the Herd</h1>
+            <p class="lead">Our camels are our partners. Get to know the unique personalities that make every
+                ride special.</p>
         </div>
     </header>
 
     <section class="section-padding pt-0">
         <div class="container">
             <div class="row g-4">
-                <!-- Camel 1 -->
+                <!-- Camel Cards (Keep existing as they are already nice) -->
                 <div class="col-md-4">
                     <div class="card fade-up">
                         <div class="card-img-wrapper">
@@ -78,7 +249,7 @@
                 </div>
                 <!-- Camel 2 -->
                 <div class="col-md-4">
-                    <div class="card fade-up">
+                    <div class="card fade-up" style="animation-delay: 0.1s;">
                         <div class="card-img-wrapper">
                             <img src="assets/images/hero-1.png" alt="Sahara" class="card-img">
                         </div>
@@ -96,7 +267,7 @@
                 </div>
                 <!-- Camel 3 -->
                 <div class="col-md-4">
-                    <div class="card fade-up">
+                    <div class="card fade-up" style="animation-delay: 0.2s;">
                         <div class="card-img-wrapper">
                             <img src="assets/images/ride-1.png" alt="Oasis" class="card-img">
                         </div>
@@ -116,6 +287,109 @@
         </div>
     </section>
 
+    <!-- Redesigned Ethical Guardians Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header mb-5">
+                <h2 class="display-4">Ethical Guardians</h2>
+                <p class="text-secondary">Meet the dedicated specialists who ensure our herd thrives in health and harmony.</p>
+            </div>
+            <div class="row g-5">
+                <div class="col-md-6">
+                    <div class="caretaker-card fade-up">
+                        <div class="caretaker-img-box">
+                            <img src="assets/images/encounter-1.png" alt="Dr. Sarah Chen">
+                        </div>
+                        <div class="caretaker-info">
+                            <div class="caretaker-social">
+                                <a href="#" class="social-circle"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-circle"><i class="fas fa-envelope"></i></a>
+                            </div>
+                            <span class="caretaker-role">Lead Veterinarian</span>
+                            <h3>Dr. Sarah Chen</h3>
+                            <p class="text-secondary">A world-renowned specialist in camelid medicine, Sarah oversees our comprehensive health programs and dietary standards.</p>
+                            <p class="small text-primary fw-bold mt-3"><i class="fas fa-certificate me-2"></i> PhD in Zoological Medicine</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="caretaker-card fade-up" style="animation-delay: 0.2s;">
+                        <div class="caretaker-img-box">
+                            <img src="assets/images/animal-1.png" alt="Marcus Thorne">
+                        </div>
+                        <div class="caretaker-info">
+                            <div class="caretaker-social">
+                                <a href="#" class="social-circle"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-circle"><i class="fas fa-envelope"></i></a>
+                            </div>
+                            <span class="caretaker-role">Head of Training</span>
+                            <h3>Marcus Thorne</h3>
+                            <p class="text-secondary">Marcus focuses on "Trust-Based Connection," a training philosophy that prioritizes the camel's emotional well-being above all.</p>
+                            <p class="small text-primary fw-bold mt-3"><i class="fas fa-award me-2"></i> Certified Ethical Animal Trainer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Redesigned Support the Herd Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="sponsorship-section fade-up">
+                <div class="section-header mb-5">
+                    <h2 class="display-4 text-white">Support the Herd</h2>
+                    <p class="opacity-75">Your sponsorship directly funds ethical care, premium nutrition, and conservation efforts.</p>
+                </div>
+                <div class="row g-4 mt-5">
+                    <!-- Tier 1 -->
+                    <div class="col-lg-4">
+                        <div class="tier-card h-100">
+                            <h4>Seedling</h4>
+                            <p class="small opacity-75">A perfect start to your journey.</p>
+                            <div class="tier-price">$25<span>/mo</span></div>
+                            <ul class="list-unstyled tier-perks">
+                                <li><i class="fas fa-check-circle text-primary"></i> Monthly Digital Photo</li>
+                                <li><i class="fas fa-check-circle text-primary"></i> Name on Support Wall</li>
+                                <li><i class="fas fa-check-circle text-primary"></i> Impact Newsletter</li>
+                            </ul>
+                            <button class="btn btn-outline w-100 mt-4" style="border-color: rgba(255,255,255,0.5); color: white;">Sponsor Now</button>
+                        </div>
+                    </div>
+                    <!-- Tier 2 -->
+                    <div class="col-lg-4">
+                        <div class="tier-card featured h-100">
+                            <div class="featured-tag">Most Popular</div>
+                            <h4>Guardian</h4>
+                            <p class="small text-secondary">Make a substantial difference.</p>
+                            <div class="tier-price">$50<span>/mo</span></div>
+                            <ul class="list-unstyled tier-perks">
+                                <li><i class="fas fa-check-circle text-primary"></i> Bi-annual Video Calls</li>
+                                <li><i class="fas fa-check-circle text-primary"></i> Custom Sponsorship Kit</li>
+                                <li><i class="fas fa-check-circle text-primary"></i> 10% Visit Discount</li>
+                            </ul>
+                            <button class="btn btn-primary w-100 mt-4">Become a Guardian</button>
+                        </div>
+                    </div>
+                    <!-- Tier 3 -->
+                    <div class="col-lg-4">
+                        <div class="tier-card h-100">
+                            <h4>Majestic</h4>
+                            <p class="small opacity-75">The ultimate commitment.</p>
+                            <div class="tier-price">$100<span>/mo</span></div>
+                            <ul class="list-unstyled tier-perks">
+                                <li><i class="fas fa-check-circle text-primary"></i> Exclusive Private Meet</li>
+                                <li><i class="fas fa-check-circle text-primary"></i> VIP Trail Priority</li>
+                                <li><i class="fas fa-check-circle text-primary"></i> Hand-carved Plaque</li>
+                            </ul>
+                            <button class="btn btn-outline w-100 mt-4" style="border-color: rgba(255,255,255,0.5); color: white;">Join Majestic Tier</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <div class="row g-5">
@@ -126,6 +400,7 @@
                 </div>
                 <div class="col-lg-2 footer-col">
                     <h4>Quick Links</h4>
+                    <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="camel-profiles.html">Camel Profiles</a></li>
                         <li><a href="ride-packages.html">Ride Packages</a></li>
@@ -159,9 +434,7 @@
     <script src="assets/js/theme-toggle.js"></script>
     <script src="assets/js/rtl-toggle.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
 </body>
 
 </html>
-
-
-

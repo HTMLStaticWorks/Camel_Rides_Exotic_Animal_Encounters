@@ -53,8 +53,8 @@
     color: var(--accent-glow);
 }
 
+[data-theme="dark"] {
     --nav-item-hover: var(--accent-glow);
-    
     --footer-bg: #141110;
     --footer-text: #F5F5F4;
     --footer-text-secondary: #A8A29E;

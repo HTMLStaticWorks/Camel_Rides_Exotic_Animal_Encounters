@@ -31,6 +31,18 @@
                 <li class="nav-item"><a href="farm-visits.html">Farm Visits</a></li>
                 <li class="nav-item"><a href="blog.html">Blog</a></li>
                 <li class="nav-item"><a href="contact.html">Contact</a></li>
+                
+                <!-- Mobile Only Actions -->
+                <li class="mobile-nav-actions">
+                    <div class="mobile-nav-toggles">
+                        <button id="rtl-toggle-mobile" class="nav-toggle-btn" title="Toggle RTL">RTL</button>
+                        <div class="theme-switch">
+                            <input type="checkbox" id="theme-toggle-mobile" class="d-none">
+                            <label for="theme-toggle-mobile" style="cursor:pointer; font-size: 1.2rem;">🌓 Theme</label>
+                        </div>
+                    </div>
+                    <a href="signup.html" class="btn btn-primary w-100">Sign Up</a>
+                </li>
             </ul>
             <div class="nav-right">
                 <div class="nav-toggles">
@@ -40,11 +52,14 @@
                 <a href="signup.html" class="btn btn-primary ms-2">Sign Up</a>
                 <a href="login.html" class="btn btn-outline d-none d-md-flex">Login</a>
             </div>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
-    <header class="section-padding" style="background: var(--bg); padding-top: 150px;">
-        <div class="container text-center">
+    <header class="hero-section">
+        <div class="hero-content">
             <h1 class="display-4">Adventure Packages</h1>
             <p class="lead">Choose the perfect trek for your journey.</p>
         </div>
@@ -119,7 +134,7 @@
     <!-- Booking Section Integration -->
     <section id="booking-form" class="section-padding bg-light">
         <div class="container">
-            <div class="text-center mb-5 fade-up">
+            <div class="section-header mb-5 fade-up">
                 <h2 class="display-4">Secure Your Spot</h2>
                 <p class="lead">Complete the form below to book your majestic experience directly.</p>
             </div>
@@ -200,10 +215,10 @@
                 </div>
                 <div class="col-lg-2 footer-col">
                     <h4>Quick Links</h4>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="camel-profiles.html">Camel Profiles</a></li>
-                        <li><a href="ride-packages.html">Ride Packages</a></li>
-                        <li><a href="farm-visits.html">Farm Visits</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="camel-profiles.html">Camel Profiles</a></li>
+                    <li><a href="ride-packages.html">Ride Packages</a></li>
+                    <li><a href="farm-visits.html">Farm Visits</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 footer-col">
@@ -236,6 +251,3 @@
 </body>
 
 </html>
-
-
-

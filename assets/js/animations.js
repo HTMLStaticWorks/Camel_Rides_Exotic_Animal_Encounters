@@ -4,6 +4,8 @@
 
 // Check if GSAP is loaded
 if (typeof gsap !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+    
     document.addEventListener('DOMContentLoaded', () => {
         // Hero Content Animation
         gsap.from('.hero-content > *', {
@@ -29,12 +31,37 @@ if (typeof gsap !== 'undefined') {
             gsap.from(header, {
                 scrollTrigger: {
                     trigger: header,
-                    start: 'top 80%'
+                    start: 'top 85%'
                 },
                 y: 30,
                 opacity: 0,
                 duration: 1,
                 ease: 'power2.out'
+            });
+        });
+
+        // Fade Up Elements
+        gsap.utils.toArray('.fade-up').forEach(el => {
+            gsap.from(el, {
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 90%'
+                },
+                y: 50,
+                opacity: 0,
+                duration: 0.8,
+                ease: 'power2.out'
+            });
+        });
+
+        // Reveal Images
+        gsap.utils.toArray('.reveal-img').forEach(img => {
+            gsap.to(img, {
+                scrollTrigger: {
+                    trigger: img,
+                    start: 'top 80%',
+                    onEnter: () => img.classList.add('active')
+                }
             });
         });
     });
