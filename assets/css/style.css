@@ -277,6 +277,7 @@ img {
 
 .btn-primary:hover {
     background: var(--accent);
+    color: white !important;
     transform: translateY(-2px);
 }
 
@@ -372,6 +373,16 @@ img {
     transition: var(--transition);
     height: 100%;
     border: 1px solid var(--border);
+}
+
+.card.text-center h1,
+.card.text-center h2,
+.card.text-center h3,
+.card.text-center h4,
+.card.text-center h5,
+.card.text-center h6,
+.card.text-center p {
+    text-align: center !important;
 }
 
 .card:hover {
@@ -832,6 +843,7 @@ img {
     font-size: 1rem !important;
     font-weight: 700 !important;
     padding: 0 30px !important;
+    width: 100% !important;
 }
 
 /* Divider for Auth Pages */
