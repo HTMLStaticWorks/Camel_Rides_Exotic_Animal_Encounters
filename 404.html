@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <nav class="navbar">
+        <nav class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">🐫 MAJESTIC TRAILS</a>
             <ul class="nav-links">
@@ -22,10 +22,22 @@
                     </div>
                 </li>
                 <li class="nav-item"><a href="camel-profiles.html">Camels</a></li>
-                <li class="nav-item"><a href="ride-packages.html">Ride Packages</a></li>
+                <li class="nav-item"><a href="ride-packages.html">Packages</a></li>
                 <li class="nav-item"><a href="farm-visits.html">Farm Visits</a></li>
                 <li class="nav-item"><a href="blog.html">Blog</a></li>
                 <li class="nav-item"><a href="contact.html">Contact</a></li>
+                
+                <!-- Mobile Only Actions -->
+                <li class="mobile-nav-actions">
+                    <div class="mobile-nav-toggles">
+                        <button id="rtl-toggle-mobile" class="nav-toggle-btn" title="Toggle RTL">RTL</button>
+                        <div class="theme-switch">
+                            <input type="checkbox" id="theme-toggle-mobile" class="d-none">
+                            <label for="theme-toggle-mobile" style="cursor:pointer; font-size: 1.2rem;">🌓 Theme</label>
+                        </div>
+                    </div>
+                    <a href="signup.html" class="btn btn-primary w-100">Sign Up</a>
+                </li>
             </ul>
             <div class="nav-right">
                 <div class="nav-toggles">
@@ -35,6 +47,9 @@
                 <a href="signup.html" class="btn btn-primary ms-2">Sign Up</a>
                 <a href="login.html" class="btn btn-outline d-none d-md-flex">Login</a>
             </div>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
@@ -54,12 +69,18 @@
                 <div class="col-lg-4 footer-col">
                     <a href="index.html" class="logo mb-4">🐫 MAJESTIC TRAILS</a>
                     <p class="opacity-75">Dedicated to ethical animal encounters and creating lifelong memories for families and explorers.</p>
+                    <div class="social-links mt-4 d-flex gap-2">
+                        <a href="#" class="social-link-btn" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link-btn" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
                 <div class="col-lg-2 footer-col">
                     <h4>Quick Links</h4>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="camel-profiles.html">Camel Profiles</a></li>
-                        <li><a href="ride-packages.html">Ride Packages</a></li>
+                        <li><a href="ride-packages.html">Packages</a></li>
                         <li><a href="farm-visits.html">Farm Visits</a></li>
                     </ul>
                 </div>
@@ -91,6 +112,7 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
 
 
 

@@ -16,6 +16,25 @@
     background: var(--surface);
 }
 
+[data-theme="dark"] .nav-links a.active {
+    color: var(--accent-glow);
+}
+
+[data-theme="dark"] .nav-links a.active::after {
+    background: var(--accent-glow);
+}
+
+[data-theme="dark"] .dropdown-item.active {
+    background: #44403C;
+    color: var(--accent-glow) !important;
+}
+
+@media (max-width: 1024px) {
+    [data-theme="dark"] .nav-links a.active {
+        border-left-color: var(--accent-glow);
+    }
+}
+
 [data-theme="dark"] .card {
     background: var(--surface);
     border-color: var(--border);

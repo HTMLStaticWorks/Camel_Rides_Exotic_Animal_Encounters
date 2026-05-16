@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Safari Experience | Majestic Trails</title>
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -12,11 +13,12 @@
     <link rel="stylesheet" href="assets/css/animations.css">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
+
 <body>
 
     <!-- Navbar (Same as index) -->
@@ -25,18 +27,19 @@
             <a href="index.html" class="logo">🐫 MAJESTIC TRAILS</a>
             <ul class="nav-links">
                 <li class="nav-item">
-                    <a href="index.html" class="active">Home <i class="fas fa-chevron-down ms-1" style="font-size: 0.7rem;"></i></a>
+                    <a href="index.html" class="active">Home <i class="fas fa-chevron-down ms-1"
+                            style="font-size: 0.7rem;"></i></a>
                     <div class="dropdown">
                         <a href="index.html" class="dropdown-item">Adventure Home</a>
-                        <a href="home-2.html" class="dropdown-item" style="color: var(--accent);">Safari Home</a>
+                        <a href="home-2.html" class="dropdown-item">Safari Home</a>
                     </div>
                 </li>
                 <li class="nav-item"><a href="camel-profiles.html">Camels</a></li>
-                <li class="nav-item"><a href="ride-packages.html">Ride Packages</a></li>
+                <li class="nav-item"><a href="ride-packages.html">Packages</a></li>
                 <li class="nav-item"><a href="farm-visits.html">Farm Visits</a></li>
                 <li class="nav-item"><a href="blog.html">Blog</a></li>
                 <li class="nav-item"><a href="contact.html">Contact</a></li>
-                
+
                 <!-- Mobile Only Actions -->
                 <li class="mobile-nav-actions">
                     <div class="mobile-nav-toggles">
@@ -50,9 +53,9 @@
                 </li>
             </ul>
             <div class="nav-right">
-                <div class="theme-switch">
-                    <input type="checkbox" id="theme-toggle" class="d-none">
-                    <label for="theme-toggle" style="cursor:pointer; font-size: 1.2rem;">🌓</label>
+                <div class="nav-toggles">
+                    <button id="rtl-toggle" class="nav-toggle-btn" title="Toggle RTL">RTL</button>
+                    <button id="theme-toggle" class="nav-toggle-btn" title="Toggle Theme">🌓</button>
                 </div>
                 <a href="signup.html" class="btn btn-primary ms-2">Sign Up</a>
                 <a href="login.html" class="btn btn-outline d-none d-md-flex">Login</a>
@@ -68,44 +71,65 @@
         <img src="assets/images/ride-1.png" alt="Safari Experience" class="hero-img">
         <div class="hero-overlay" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7));"></div>
         <div class="hero-content mx-auto">
-            <h1 class="hero-title" style="text-shadow: 0 4px 20px rgba(0,0,0,0.5);">A Safari Into the Heart of Nature</h1>
-            <p class="lead mb-4" style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);">Immersive animal encounters and desert treks designed for the curious soul.</p>
+            <h1 class="hero-title" style="text-shadow: 0 4px 20px rgba(0,0,0,0.5);">A Safari Into the Heart of Nature
+            </h1>
+            <p class="lead mb-4" style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);">Immersive animal encounters and desert
+                treks designed for the curious soul.</p>
             <div class="hero-btns">
                 <a href="booking.html" class="btn btn-primary">Plan Your Safari</a>
             </div>
         </div>
     </header>
 
-    <!-- Stats Section -->
-    <section class="section-padding">
+    <!-- Impact & Scale Section -->
+    <section class="section-padding overflow-hidden">
         <div class="container">
-            <div class="section-header mb-5">
-                <h2 class="display-5">Our Impact & Scale</h2>
-                <p class="text-secondary">Tracking our commitment to ethical animal encounters and visitor satisfaction.</p>
+            <div class="section-header text-center mb-5">
+                <span class="card-tag">Our Legacy</span>
+                <h2 class="display-5 mt-3">Our Impact & Scale</h2>
+                <p class="lead">Driving ethical conservation and magical encounters across the region.</p>
             </div>
-            <div class="row g-4 text-center">
-                <div class="col-md-3">
-                    <div class="glass-panel py-5 fade-up">
-                        <h2 class="display-4 text-primary">25+</h2>
-                        <p class="text-uppercase fw-bold">Happy Camels</p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card fade-up">
+                        <div class="stat-icon-box">
+                            <i class="fa-solid fa-camel"></i>
+                        </div>
+                        <h2 class="stat-number">50+</h2>
+                        <p class="stat-label">Majestic Camels</p>
+                        <p class="stat-desc">The largest and healthiest herd of well-trained camels in the high desert.
+                        </p>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="glass-panel py-5 fade-up">
-                        <h2 class="display-4 text-primary">15k</h2>
-                        <p class="text-uppercase fw-bold">Annual Visitors</p>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card fade-up" style="animation-delay: 0.1s;">
+                        <div class="stat-icon-box">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <h2 class="stat-number">15k</h2>
+                        <p class="stat-label">Annual Visitors</p>
+                        <p class="stat-desc">Providing unforgettable memories to thousands of explorers every year.</p>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="glass-panel py-5 fade-up">
-                        <h2 class="display-4 text-primary">12</h2>
-                        <p class="text-uppercase fw-bold">Rare Species</p>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card fade-up" style="animation-delay: 0.2s;">
+                        <div class="stat-icon-box">
+                            <i class="fa-solid fa-paw"></i>
+                        </div>
+                        <h2 class="stat-number">12+</h2>
+                        <p class="stat-label">Rare Species</p>
+                        <p class="stat-desc">Home to exotic rescues including lemurs, giant tortoises, and more.</p>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="glass-panel py-5 fade-up">
-                        <h2 class="display-4 text-primary">100%</h2>
-                        <p class="text-uppercase fw-bold">Ethical Rating</p>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card fade-up" style="animation-delay: 0.3s;">
+                        <div class="stat-icon-box">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h2 class="stat-number">100%</h2>
+                        <p class="stat-label">Ethical Rating</p>
+                        <p class="stat-desc">Certified by global animal welfare organizations for superior care
+                            standards.</p>
                     </div>
                 </div>
             </div>
@@ -121,13 +145,13 @@
             </div>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <img src="assets/images/encounter-1.png" class="rounded-4 hover-lift w-100 shadow" alt="Gallery">
+                    <img src="assets/images/safari-1.png" class="rounded-4 hover-lift w-100 shadow" alt="Safari Sunset">
                 </div>
                 <div class="col-md-4">
-                    <img src="assets/images/camel-1.png" class="rounded-4 hover-lift w-100 shadow" alt="Gallery">
+                    <img src="assets/images/safari-2.png" class="rounded-4 hover-lift w-100 shadow" alt="Exotic Lemur">
                 </div>
                 <div class="col-md-4">
-                    <img src="assets/images/farm-1.png" class="rounded-4 hover-lift w-100 shadow" alt="Gallery">
+                    <img src="assets/images/safari-3.png" class="rounded-4 hover-lift w-100 shadow" alt="Family Connection">
                 </div>
             </div>
         </div>
@@ -140,13 +164,14 @@
                 <h2 class="display-5">Choose Your Safari Style</h2>
                 <p class="text-secondary">We offer tailored experiences to match your sense of adventure.</p>
             </div>
-            <div class="row g-4">
-                <div class="col-md-4">
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
                     <div class="card h-100 border-0 shadow-sm fade-up">
                         <div class="card-body p-5">
                             <div class="icon mb-4" style="font-size: 2.5rem;">🏜️</div>
                             <h3>Classic Trek</h3>
-                            <p class="text-secondary">A traditional journey through the shifting dunes, perfect for first-timers and photographers.</p>
+                            <p class="text-secondary">A traditional journey through the shifting dunes, perfect for
+                                first-timers and photographers.</p>
                             <ul class="list-unstyled mt-4">
                                 <li><i class="fas fa-check text-primary me-2"></i> 90 Minute Ride</li>
                                 <li><i class="fas fa-check text-primary me-2"></i> Expert Guide</li>
@@ -154,12 +179,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm fade-up" style="background: var(--primary); color: white;">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm fade-up"
+                        style="background: var(--primary); color: white;">
                         <div class="card-body p-5">
                             <div class="icon mb-4" style="font-size: 2.5rem;">✨</div>
                             <h3 class="text-white">Luxury Sunset</h3>
-                            <p class="opacity-75">Our most popular experience. Includes a gourmet dinner under the stars after your trek.</p>
+                            <p class="opacity-75">Our most popular experience. Includes a gourmet dinner under the stars
+                                after your trek.</p>
                             <ul class="list-unstyled mt-4">
                                 <li><i class="fas fa-check text-white me-2"></i> 2 Hour Trek</li>
                                 <li><i class="fas fa-check text-white me-2"></i> 3-Course Dinner</li>
@@ -167,12 +194,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="card h-100 border-0 shadow-sm fade-up">
                         <div class="card-body p-5">
                             <div class="icon mb-4" style="font-size: 2.5rem;">🌙</div>
                             <h3>Starlight Safari</h3>
-                            <p class="text-secondary">Navigate the desert by moonlight. A peaceful and spiritual encounter with the wild.</p>
+                            <p class="text-secondary">Navigate the desert by moonlight. A peaceful and spiritual
+                                encounter with the wild.</p>
                             <ul class="list-unstyled mt-4">
                                 <li><i class="fas fa-check text-primary me-2"></i> Night Navigation</li>
                                 <li><i class="fas fa-check text-primary me-2"></i> Astronomy Session</li>
@@ -191,32 +219,38 @@
                 <h2 class="display-5">How It Works</h2>
                 <p class="text-secondary">Three simple steps to your desert adventure.</p>
             </div>
-            <div class="row g-5">
+            <div class="row g-5 justify-content-center">
                 <div class="col-md-4 fade-up">
                     <div class="card h-100 border-0 shadow-sm p-4 text-center">
                         <div class="step-image mb-4">
-                            <img src="assets/images/step-choose.png" alt="Choose Experience" class="img-fluid rounded-4" style="max-height: 150px;">
+                            <img src="assets/images/step-choose.png" alt="Choose Experience"
+                                class="img-fluid rounded-4 d-block mx-auto" style="max-height: 150px;">
                         </div>
                         <h4 class="h5">Choose Experience</h4>
-                        <p class="text-secondary small">Select the trek or animal encounter that fits your schedule and interest.</p>
+                        <p class="text-secondary small">Select the trek or animal encounter that fits your schedule and
+                            interest.</p>
                     </div>
                 </div>
                 <div class="col-md-4 fade-up" style="animation-delay: 0.1s;">
                     <div class="card h-100 border-0 shadow-sm p-4 text-center">
                         <div class="step-image mb-4">
-                            <img src="assets/images/step-book.png" alt="Secure Booking" class="img-fluid rounded-4" style="max-height: 150px;">
+                            <img src="assets/images/step-book.png" alt="Secure Booking"
+                                class="img-fluid rounded-4 d-block mx-auto" style="max-height: 150px;">
                         </div>
                         <h4 class="h5">Secure Booking</h4>
-                        <p class="text-secondary small">Use our simple form to request your preferred date. No immediate payment needed.</p>
+                        <p class="text-secondary small">Use our simple form to request your preferred date. No immediate
+                            payment needed.</p>
                     </div>
                 </div>
                 <div class="col-md-4 fade-up" style="animation-delay: 0.2s;">
                     <div class="card h-100 border-0 shadow-sm p-4 text-center">
                         <div class="step-image mb-4">
-                            <img src="assets/images/step-join.png" alt="Join the Herd" class="img-fluid rounded-4" style="max-height: 150px;">
+                            <img src="assets/images/step-join.png" alt="Join the Herd"
+                                class="img-fluid rounded-4 d-block mx-auto" style="max-height: 150px;">
                         </div>
                         <h4 class="h5">Join the Herd</h4>
-                        <p class="text-secondary small">Arrive at our trail-head for a safety briefing before heading into the wild.</p>
+                        <p class="text-secondary small">Arrive at our trail-head for a safety briefing before heading
+                            into the wild.</p>
                     </div>
                 </div>
             </div>
@@ -235,21 +269,24 @@
                     <div class="faq-container">
                         <div class="faq-item mb-3 p-4 glass-panel">
                             <h5 class="mb-0">What should I wear?</h5>
-                            <p class="mt-2 text-secondary small">Lightweight, breathable clothing and closed-toe shoes are essential. We provide sun hats if needed.</p>
+                            <p class="mt-2 text-secondary small">Lightweight, breathable clothing and closed-toe shoes
+                                are essential. We provide sun hats if needed.</p>
                         </div>
                         <div class="faq-item mb-3 p-4 glass-panel">
                             <h5 class="mb-0">Is there an age limit?</h5>
-                            <p class="mt-2 text-secondary small">We welcome explorers of all ages. Children under 5 ride with a guardian on specialized saddles.</p>
+                            <p class="mt-2 text-secondary small">We welcome explorers of all ages. Children under 5 ride
+                                with a guardian on specialized saddles.</p>
                         </div>
                         <div class="faq-item p-4 glass-panel">
                             <h5 class="mb-0">How safe are the treks?</h5>
-                            <p class="mt-2 text-secondary small">Safety is our priority. Every camel is trained for years, and our guides are certified in desert first aid.</p>
+                            <p class="mt-2 text-secondary small">Safety is our priority. Every camel is trained for
+                                years, and our guides are certified in desert first aid.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5 offset-lg-1">
                     <div class="reveal-img">
-                        <img src="assets/images/encounter-1.png" alt="Safety Briefing" class="rounded-4 shadow-lg">
+                        <img src="assets/images/trail-gear.png" alt="Trail Essentials Gear" class="rounded-4 shadow-lg">
                     </div>
                 </div>
             </div>
@@ -262,14 +299,21 @@
             <div class="row g-5">
                 <div class="col-lg-4 footer-col">
                     <a href="index.html" class="logo mb-4">🐫 MAJESTIC TRAILS</a>
-                    <p class="opacity-75">Dedicated to ethical animal encounters and creating lifelong memories for families and explorers.</p>
+                    <p class="opacity-75">Dedicated to ethical animal encounters and creating lifelong memories for
+                        families and explorers.</p>
+                    <div class="social-links mt-4 d-flex gap-2">
+                        <a href="#" class="social-link-btn" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link-btn" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
                 <div class="col-lg-2 footer-col">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html" class="active">Home</a></li>
                         <li><a href="camel-profiles.html">Camel Profiles</a></li>
-                        <li><a href="ride-packages.html">Ride Packages</a></li>
+                        <li><a href="ride-packages.html">Packages</a></li>
                         <li><a href="farm-visits.html">Farm Visits</a></li>
                     </ul>
                 </div>
@@ -301,4 +345,5 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/animations.js"></script>
 </body>
+
 </html>

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="assets/css/animations.css">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -26,29 +26,35 @@
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
         }
+
         .caretaker-card:hover {
             transform: translateY(-15px);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
         }
+
         .caretaker-img-box {
             height: 350px;
             position: relative;
             overflow: hidden;
         }
+
         .caretaker-img-box img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.8s ease;
         }
+
         .caretaker-card:hover .caretaker-img-box img {
             transform: scale(1.1);
         }
+
         .caretaker-info {
             padding: 35px;
             position: relative;
             background: var(--surface);
         }
+
         .caretaker-role {
             font-size: 0.8rem;
             text-transform: uppercase;
@@ -58,6 +64,7 @@
             display: block;
             margin-bottom: 10px;
         }
+
         .caretaker-social {
             position: absolute;
             top: -25px;
@@ -65,6 +72,7 @@
             display: flex;
             gap: 10px;
         }
+
         .social-circle {
             width: 50px;
             height: 50px;
@@ -77,13 +85,14 @@
             box-shadow: var(--shadow);
             transition: var(--transition);
         }
+
         .social-circle:hover {
             background: var(--accent);
             transform: scale(1.1);
         }
 
         .sponsorship-section {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/ride-1.png');
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/ride-1.png');
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
@@ -92,6 +101,7 @@
             padding: 100px 50px;
             margin: 0 20px;
         }
+
         .tier-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(15px);
@@ -101,45 +111,55 @@
             transition: all 0.4s ease;
             position: relative;
         }
+
         .tier-card:hover {
             background: rgba(255, 255, 255, 0.1);
             border-color: var(--accent);
             transform: translateY(-10px);
         }
+
         .tier-card.featured {
             background: var(--primary);
             color: white;
             border-color: var(--primary);
         }
+
         .tier-card.featured .text-secondary,
         .tier-card.featured .opacity-75 {
             color: rgba(255, 255, 255, 0.8) !important;
         }
+
         .tier-card.featured .tier-price span {
             color: rgba(255, 255, 255, 0.6) !important;
         }
+
         .tier-card.featured .btn-primary {
             background: white;
             color: var(--primary);
             border: none;
         }
+
         .tier-card.featured .btn-primary:hover {
             background: var(--accent);
             color: white;
         }
+
         .tier-card.featured i {
             color: white !important;
         }
+
         .tier-price {
             font-size: 3rem;
             font-weight: 800;
             margin: 20px 0;
         }
+
         .tier-price span {
             font-size: 1rem;
             opacity: 0.7;
             font-weight: 400;
         }
+
         .tier-perks li {
             margin-bottom: 15px;
             display: flex;
@@ -147,6 +167,7 @@
             gap: 12px;
             font-size: 0.95rem;
         }
+
         .featured-tag {
             position: absolute;
             top: -15px;
@@ -160,15 +181,43 @@
             font-weight: 700;
             text-transform: uppercase;
         }
+
         .sponsorship-section .btn-outline {
             border: 2px solid rgba(255, 255, 255, 0.4) !important;
             color: white !important;
             backdrop-filter: blur(5px);
         }
+
         .sponsorship-section .btn-outline:hover {
             background: white !important;
             color: var(--primary) !important;
             border-color: white !important;
+        }
+
+        @media (max-width: 768px) {
+            .sponsorship-section {
+                padding: 60px 20px !important;
+                margin: 0 !important;
+                border-radius: 30px !important;
+            }
+
+            .tier-card {
+                padding: 35px 25px !important;
+                text-align: center;
+            }
+
+            .tier-perks li {
+                justify-content: center;
+                text-align: left;
+            }
+
+            .tier-price {
+                font-size: 2.5rem;
+            }
+
+            .glass-panel {
+                padding: 30px 15px !important;
+            }
         }
     </style>
 </head>
@@ -187,11 +236,11 @@
                     </div>
                 </li>
                 <li class="nav-item"><a href="camel-profiles.html" class="active">Camels</a></li>
-                <li class="nav-item"><a href="ride-packages.html">Ride Packages</a></li>
+                <li class="nav-item"><a href="ride-packages.html">Packages</a></li>
                 <li class="nav-item"><a href="farm-visits.html">Farm Visits</a></li>
                 <li class="nav-item"><a href="blog.html">Blog</a></li>
                 <li class="nav-item"><a href="contact.html">Contact</a></li>
-                
+
                 <!-- Mobile Only Actions -->
                 <li class="mobile-nav-actions">
                     <div class="mobile-nav-toggles">
@@ -218,67 +267,76 @@
         </div>
     </nav>
 
-    <header class="hero-section">
+    <header class="hero-section text-center">
         <div class="hero-content">
-            <h1 class="display-4">Meet the Herd</h1>
-            <p class="lead">Our camels are our partners. Get to know the unique personalities that make every
-                ride special.</p>
+            <h1 class="display-4 fw-bold text-primary">Meet the Herd</h1>
+            <p class="lead fw-medium opacity-90">Our camels are our partners. Get to know the unique personalities that
+                make every ride special.</p>
         </div>
     </header>
 
     <section class="section-padding pt-0">
         <div class="container">
             <div class="row g-4">
-                <!-- Camel Cards (Keep existing as they are already nice) -->
+                <!-- Camel 1 -->
                 <div class="col-md-4">
-                    <div class="card fade-up">
+                    <div class="card h-100 fade-up">
                         <div class="card-img-wrapper">
-                            <img src="assets/images/camel-1.png" alt="Sultan" class="card-img">
+                            <img src="assets/images/sultan.png" alt="Sultan" class="card-img">
                         </div>
-                        <div class="card-content">
-                            <h3>Sultan</h3>
-                            <p class="text-secondary mb-3">The Gentle Giant</p>
+                        <div class="card-content d-flex flex-column h-100">
+                            <h3 class="fw-bold">Sultan</h3>
+                            <p class="text-primary fw-bold small mb-3">The Gentle Giant</p>
                             <p>Sultan is our oldest and most experienced camel. He loves carrots and is incredibly
-                                patient with first-time riders.</p>
-                            <div class="mt-3">
-                                <span class="badge bg-primary rounded-pill px-3 py-2">Experienced</span>
-                                <span class="badge bg-secondary rounded-pill px-3 py-2">Calm</span>
+                                patient with riders.</p>
+                            <div class="mt-auto pt-3">
+                                <div class="mb-4">
+                                    <span class="badge bg-primary rounded-pill px-3 py-2">Experienced</span>
+                                    <span class="badge bg-secondary rounded-pill px-3 py-2">Calm</span>
+                                </div>
+                                <a href="booking.html" class="btn btn-primary w-100">Sponsor Sultan</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Camel 2 -->
                 <div class="col-md-4">
-                    <div class="card fade-up" style="animation-delay: 0.1s;">
+                    <div class="card h-100 fade-up" style="animation-delay: 0.1s;">
                         <div class="card-img-wrapper">
                             <img src="assets/images/hero-1.png" alt="Sahara" class="card-img">
                         </div>
-                        <div class="card-content">
-                            <h3>Sahara</h3>
-                            <p class="text-secondary mb-3">The Spirited Explorer</p>
+                        <div class="card-content d-flex flex-column h-100">
+                            <h3 class="fw-bold">Sahara</h3>
+                            <p class="text-primary fw-bold small mb-3">The Spirited Explorer</p>
                             <p>Sahara is full of energy and loves the long trekking trails. She's a favorite among
                                 photography enthusiasts.</p>
-                            <div class="mt-3">
-                                <span class="badge bg-primary rounded-pill px-3 py-2">Energetic</span>
-                                <span class="badge bg-secondary rounded-pill px-3 py-2">Curious</span>
+                            <div class="mt-auto pt-3">
+                                <div class="mb-4">
+                                    <span class="badge bg-primary rounded-pill px-3 py-2">Energetic</span>
+                                    <span class="badge bg-secondary rounded-pill px-3 py-2">Curious</span>
+                                </div>
+                                <a href="booking.html" class="btn btn-primary w-100">Sponsor Sahara</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Camel 3 -->
                 <div class="col-md-4">
-                    <div class="card fade-up" style="animation-delay: 0.2s;">
+                    <div class="card h-100 fade-up" style="animation-delay: 0.2s;">
                         <div class="card-img-wrapper">
-                            <img src="assets/images/ride-1.png" alt="Oasis" class="card-img">
+                            <img src="assets/images/oasis.png" alt="Oasis" class="card-img">
                         </div>
-                        <div class="card-content">
-                            <h3>Oasis</h3>
-                            <p class="text-secondary mb-3">The Family Favorite</p>
+                        <div class="card-content d-flex flex-column h-100">
+                            <h3 class="fw-bold">Oasis</h3>
+                            <p class="text-primary fw-bold small mb-3">The Family Favorite</p>
                             <p>Oasis is known for her soft coat and gentle nature around children. She's the perfect
                                 companion for family rides.</p>
-                            <div class="mt-3">
-                                <span class="badge bg-primary rounded-pill px-3 py-2">Gentle</span>
-                                <span class="badge bg-secondary rounded-pill px-3 py-2">Friendly</span>
+                            <div class="mt-auto pt-3">
+                                <div class="mb-4">
+                                    <span class="badge bg-primary rounded-pill px-3 py-2">Gentle</span>
+                                    <span class="badge bg-secondary rounded-pill px-3 py-2">Friendly</span>
+                                </div>
+                                <a href="booking.html" class="btn btn-primary w-100">Sponsor Oasis</a>
                             </div>
                         </div>
                     </div>
@@ -292,13 +350,14 @@
         <div class="container">
             <div class="section-header mb-5">
                 <h2 class="display-4">Ethical Guardians</h2>
-                <p class="text-secondary">Meet the dedicated specialists who ensure our herd thrives in health and harmony.</p>
+                <p class="text-secondary">Meet the dedicated specialists who ensure our herd thrives in health and
+                    harmony.</p>
             </div>
             <div class="row g-5">
                 <div class="col-md-6">
                     <div class="caretaker-card fade-up">
                         <div class="caretaker-img-box">
-                            <img src="assets/images/encounter-1.png" alt="Dr. Sarah Chen">
+                            <img src="assets/images/sarah.png" alt="Dr. Sarah Chen">
                         </div>
                         <div class="caretaker-info">
                             <div class="caretaker-social">
@@ -307,15 +366,17 @@
                             </div>
                             <span class="caretaker-role">Lead Veterinarian</span>
                             <h3>Dr. Sarah Chen</h3>
-                            <p class="text-secondary">A world-renowned specialist in camelid medicine, Sarah oversees our comprehensive health programs and dietary standards.</p>
-                            <p class="small text-primary fw-bold mt-3"><i class="fas fa-certificate me-2"></i> PhD in Zoological Medicine</p>
+                            <p class="text-secondary">A world-renowned specialist in camelid medicine, Sarah oversees
+                                our comprehensive health programs and dietary standards.</p>
+                            <p class="small text-primary fw-bold mt-3"><i class="fas fa-certificate me-2"></i> PhD in
+                                Zoological Medicine</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="caretaker-card fade-up" style="animation-delay: 0.2s;">
                         <div class="caretaker-img-box">
-                            <img src="assets/images/animal-1.png" alt="Marcus Thorne">
+                            <img src="assets/images/marcus.png" alt="Marcus Thorne">
                         </div>
                         <div class="caretaker-info">
                             <div class="caretaker-social">
@@ -324,8 +385,10 @@
                             </div>
                             <span class="caretaker-role">Head of Training</span>
                             <h3>Marcus Thorne</h3>
-                            <p class="text-secondary">Marcus focuses on "Trust-Based Connection," a training philosophy that prioritizes the camel's emotional well-being above all.</p>
-                            <p class="small text-primary fw-bold mt-3"><i class="fas fa-award me-2"></i> Certified Ethical Animal Trainer</p>
+                            <p class="text-secondary">Marcus focuses on "Trust-Based Connection," a training philosophy
+                                that prioritizes the camel's emotional well-being above all.</p>
+                            <p class="small text-primary fw-bold mt-3"><i class="fas fa-award me-2"></i> Certified
+                                Ethical Animal Trainer</p>
                         </div>
                     </div>
                 </div>
@@ -339,7 +402,8 @@
             <div class="sponsorship-section fade-up">
                 <div class="section-header mb-5">
                     <h2 class="display-4 text-white">Support the Herd</h2>
-                    <p class="opacity-75">Your sponsorship directly funds ethical care, premium nutrition, and conservation efforts.</p>
+                    <p class="opacity-75">Your sponsorship directly funds ethical care, premium nutrition, and
+                        conservation efforts.</p>
                 </div>
                 <div class="row g-4 mt-5">
                     <!-- Tier 1 -->
@@ -353,7 +417,8 @@
                                 <li><i class="fas fa-check-circle text-primary"></i> Name on Support Wall</li>
                                 <li><i class="fas fa-check-circle text-primary"></i> Impact Newsletter</li>
                             </ul>
-                            <button class="btn btn-outline w-100 mt-4" style="border-color: rgba(255,255,255,0.5); color: white;">Sponsor Now</button>
+                            <button class="btn btn-outline w-100 mt-4"
+                                style="border-color: rgba(255,255,255,0.5); color: white;">Sponsor Now</button>
                         </div>
                     </div>
                     <!-- Tier 2 -->
@@ -382,7 +447,8 @@
                                 <li><i class="fas fa-check-circle text-primary"></i> VIP Trail Priority</li>
                                 <li><i class="fas fa-check-circle text-primary"></i> Hand-carved Plaque</li>
                             </ul>
-                            <button class="btn btn-outline w-100 mt-4" style="border-color: rgba(255,255,255,0.5); color: white;">Join Majestic Tier</button>
+                            <button class="btn btn-outline w-100 mt-4"
+                                style="border-color: rgba(255,255,255,0.5); color: white;">Join Majestic Tier</button>
                         </div>
                     </div>
                 </div>
@@ -397,13 +463,19 @@
                     <a href="index.html" class="logo text-white mb-4">🐫 MAJESTIC TRAILS</a>
                     <p class="opacity-75">Dedicated to ethical animal encounters and creating lifelong memories for
                         families and explorers.</p>
+                    <div class="social-links mt-4 d-flex gap-2">
+                        <a href="#" class="social-link-btn" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link-btn" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
                 <div class="col-lg-2 footer-col">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="camel-profiles.html">Camel Profiles</a></li>
-                        <li><a href="ride-packages.html">Ride Packages</a></li>
+                        <li><a href="ride-packages.html">Packages</a></li>
                         <li><a href="farm-visits.html">Farm Visits</a></li>
                     </ul>
                 </div>

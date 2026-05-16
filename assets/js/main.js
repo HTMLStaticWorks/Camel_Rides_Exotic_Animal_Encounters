@@ -27,13 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
     navItems.forEach(item => {
         const link = item.querySelector('a');
         const dropdown = item.querySelector('.dropdown');
-        
+
         if (dropdown) {
             link.addEventListener('click', (e) => {
                 if (window.innerWidth <= 1024) {
                     e.preventDefault();
                     e.stopPropagation();
-                    
+
                     // Close other dropdowns
                     navItems.forEach(otherItem => {
                         if (otherItem !== item) {
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
-            
+
             // Sync all toggles
             themeToggles.forEach(t => t.checked = (newTheme === 'dark'));
         });
@@ -79,10 +79,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const question = item.querySelector('.faq-question');
         question.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
-            
+
             // Close all items
             faqItems.forEach(i => i.classList.remove('active'));
-            
+
             // Open clicked item if it wasn't active
             if (!isActive) {
                 item.classList.add('active');
@@ -105,4 +105,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
         lazyImages.forEach(img => imageObserver.observe(img));
     }
+
+    // Active Menu Highlighting
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const allNavLinks = document.querySelectorAll('.nav-links a');
+
+    // 1. First remove all active classes
+    allNavLinks.forEach(link => link.classList.remove('active'));
+
+    // 2. Add active class to matching link
+    allNavLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPath) {
+            link.classList.add('active');
+
+            // If it's a dropdown item, highlight the parent as well
+            const parentDropdown = link.closest('.dropdown');
+            if (parentDropdown) {
+                const parentLink = parentDropdown.parentElement.querySelector('a');
+                if (parentLink) parentLink.classList.add('active');
+            }
+        }
+    });
+
+    // 3. Special case for Blog sub-pages
+    if (currentPath.startsWith('blog-')) {
+        const blogLink = document.querySelector('.nav-links a[href="blog.html"]');
+        if (blogLink) blogLink.classList.add('active');
+    }
+
+    // Password Visibility Toggle
+    const passwordToggles = document.querySelectorAll('.toggle-password');
+    passwordToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const targetId = toggle.getAttribute('data-target');
+            const input = document.getElementById(targetId);
+            const icon = toggle.querySelector('i');
+
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        });
+    });
 });
