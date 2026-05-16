@@ -22,34 +22,49 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Mobile Dropdown Toggle
-    const navItems = document.querySelectorAll('.nav-item');
-    navItems.forEach(item => {
-        const link = item.querySelector('a');
-        const dropdown = item.querySelector('.dropdown');
+    // Tablet/Mobile Dropdown Logic (Fixed for 1024px)
+    const isTabletOrMobile = window.innerWidth <= 1024;
 
-        if (dropdown) {
-            link.addEventListener('click', (e) => {
-                if (window.innerWidth <= 1024) {
-                    e.preventDefault();
-                    e.stopPropagation();
+    if (isTabletOrMobile) {
+        document.querySelectorAll(".nav-item").forEach(item => {
+            const link = item.querySelector("a");
+            const dropdown = item.querySelector(".dropdown");
 
-                    // Close other dropdowns
-                    navItems.forEach(otherItem => {
-                        if (otherItem !== item) {
-                            otherItem.classList.remove('dropdown-open');
-                            const otherDropdown = otherItem.querySelector('.dropdown');
-                            if (otherDropdown) otherDropdown.style.display = 'none';
-                        }
-                    });
+            if (dropdown && link) {
+                item.classList.add("has-dropdown");
 
-                    item.classList.toggle('dropdown-open');
-                    const isOpened = item.classList.contains('dropdown-open');
-                    dropdown.style.display = isOpened ? 'block' : 'none';
-                }
+                link.addEventListener("click", function (e) {
+                    if (window.innerWidth <= 1024) {
+                        e.preventDefault();
+                        e.stopPropagation();
+
+                        const parent = this.parentElement;
+
+                        // Close other dropdowns
+                        document.querySelectorAll(".has-dropdown").forEach(otherItem => {
+                            if (otherItem !== parent) {
+                                otherItem.classList.remove("active");
+                            }
+                        });
+
+                        parent.classList.toggle("active");
+                    }
+                });
+            }
+        });
+
+        document.querySelectorAll(".dropdown").forEach(menu => {
+            menu.addEventListener("click", function (e) {
+                e.stopPropagation();
             });
-        }
-    });
+        });
+
+        document.addEventListener("click", () => {
+            document.querySelectorAll(".has-dropdown").forEach(item => {
+                item.classList.remove("active");
+            });
+        });
+    }
 
     // Theme Toggle (Handle both mobile and desktop)
     const themeToggles = document.querySelectorAll('[id^="theme-toggle"]');

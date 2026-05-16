@@ -13,6 +13,15 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
+        .auth-toggles {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+        }
+
         .login-container {
             display: flex;
             align-items: center;
@@ -64,6 +73,11 @@
 </head>
 
 <body>
+
+    <div class="auth-toggles">
+        <button id="rtl-toggle" class="nav-toggle-btn" title="Toggle RTL">RTL</button>
+        <button id="theme-toggle" class="nav-toggle-btn" title="Toggle Theme">🌓</button>
+    </div>
 
     <div class="login-container">
         <div class="login-card fade-up">
