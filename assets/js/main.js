@@ -22,49 +22,50 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Tablet/Mobile Dropdown Logic (Fixed for 1024px)
-    const isTabletOrMobile = window.innerWidth <= 1024;
+    // Tablet/Mobile Dropdown Logic (Fixed for 1024px and below)
+    const dropdownTriggers = document.querySelectorAll(".has-dropdown > a");
+    
+    dropdownTriggers.forEach(trigger => {
+        trigger.addEventListener("click", function (e) {
+            // Use matchMedia to perfectly sync with CSS media queries
+            const isMobileOrTablet = window.matchMedia("(max-width: 1024px)").matches;
+            
+            if (isMobileOrTablet) {
+                e.preventDefault();
+                e.stopPropagation();
 
-    if (isTabletOrMobile) {
-        document.querySelectorAll(".nav-item").forEach(item => {
-            const link = item.querySelector("a");
-            const dropdown = item.querySelector(".dropdown");
+                const parent = this.parentElement;
 
-            if (dropdown && link) {
-                item.classList.add("has-dropdown");
-
-                link.addEventListener("click", function (e) {
-                    if (window.innerWidth <= 1024) {
-                        e.preventDefault();
-                        e.stopPropagation();
-
-                        const parent = this.parentElement;
-
-                        // Close other dropdowns
-                        document.querySelectorAll(".has-dropdown").forEach(otherItem => {
-                            if (otherItem !== parent) {
-                                otherItem.classList.remove("active");
-                            }
-                        });
-
-                        parent.classList.toggle("active");
+                // Close other open dropdowns
+                document.querySelectorAll(".has-dropdown").forEach(item => {
+                    if (item !== parent) {
+                        item.classList.remove("active");
                     }
                 });
+
+                // Toggle current dropdown
+                parent.classList.toggle("active");
             }
         });
+    });
 
-        document.querySelectorAll(".dropdown").forEach(menu => {
-            menu.addEventListener("click", function (e) {
+    // Prevent clicks inside the dropdown menu from closing it
+    document.querySelectorAll(".dropdown-menu").forEach(menu => {
+        menu.addEventListener("click", function (e) {
+            if (window.matchMedia("(max-width: 1024px)").matches) {
                 e.stopPropagation();
-            });
+            }
         });
+    });
 
-        document.addEventListener("click", () => {
+    // Close all dropdowns when clicking anywhere else on the document
+    document.addEventListener("click", () => {
+        if (window.matchMedia("(max-width: 1024px)").matches) {
             document.querySelectorAll(".has-dropdown").forEach(item => {
                 item.classList.remove("active");
             });
-        });
-    }
+        }
+    });
 
     // Theme Toggle (Handle both mobile and desktop)
     const themeToggles = document.querySelectorAll('[id^="theme-toggle"]');
@@ -135,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.add('active');
 
             // If it's a dropdown item, highlight the parent as well
-            const parentDropdown = link.closest('.dropdown');
+            const parentDropdown = link.closest('.dropdown-menu');
             if (parentDropdown) {
                 const parentLink = parentDropdown.parentElement.querySelector('a');
                 if (parentLink) parentLink.classList.add('active');
