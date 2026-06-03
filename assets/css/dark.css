@@ -3,13 +3,14 @@
  */
 
 [data-theme="dark"] {
+    color-scheme: dark;
     --bg: #1C1917;
     --surface: #292524;
     --text-primary: #F5F5F4;
     --text-secondary: #D6D3D1;
     --border: #44403C;
     --glass: rgba(41, 37, 36, 0.7);
-    --accent-glow: #FBBF24;
+    --accent-glow: #D97706;
 }
 
 [data-theme="dark"] .navbar.scrolled {
@@ -56,8 +57,13 @@
 }
 
 [data-theme="dark"] .form-control {
-    background: #44403C;
+    background: #44403C !important;
     border-color: var(--border);
+}
+
+[data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
 }
 
 [data-theme="dark"] .dropdown-menu {
@@ -86,7 +92,7 @@
 }
 
 [data-theme="dark"] .footer .logo {
-    color: #F5F5F4 !important;
+    color: var(--accent-glow) !important;
 }
 
 [data-theme="dark"] .footer p {
@@ -102,4 +108,12 @@
 [data-theme="dark"] .social-link-btn:hover {
     background: var(--accent-glow);
     color: var(--bg);
+}
+
+[data-theme="dark"] .text-primary {
+    color: var(--accent-glow) !important;
+}
+
+[data-theme="dark"] .text-primary:hover {
+    color: #FBBF24 !important;
 }

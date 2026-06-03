@@ -41,6 +41,22 @@ body {
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
+/* Alternating Section Backgrounds */
+.bg-light {
+    background-color: var(--surface) !important;
+}
+
+/* Brand Text Override & Hover Highlights */
+.text-primary {
+    color: var(--primary) !important;
+    transition: var(--transition);
+}
+
+.text-primary:hover {
+    color: var(--accent) !important;
+    text-decoration: underline !important;
+}
+
 h1,
 h2,
 h3,
@@ -229,7 +245,7 @@ img {
         padding: 10px 0;
     }
 
-    .has-dropdown.active > .dropdown-menu {
+    .has-dropdown.active>.dropdown-menu {
         display: block !important;
         opacity: 1 !important;
         visibility: visible !important;
@@ -815,7 +831,7 @@ img {
     max-height: 0;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    background: white;
+    background: var(--surface);
 }
 
 .faq-item.active .faq-answer {

@@ -82,10 +82,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // RTL Toggle (Handle both mobile and desktop)
     const rtlToggles = document.querySelectorAll('[id^="rtl-toggle"]');
+    const initialDir = localStorage.getItem('dir') || 'ltr';
+    document.documentElement.setAttribute('dir', initialDir);
+
+    function updateRTLButtons(dir) {
+        rtlToggles.forEach(toggle => {
+            toggle.textContent = dir === 'ltr' ? 'RTL' : 'LTR';
+        });
+    }
+
+    // Set initial button states
+    updateRTLButtons(initialDir);
+
     rtlToggles.forEach(toggle => {
         toggle.addEventListener('click', () => {
-            const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
-            document.documentElement.setAttribute('dir', isRTL ? 'ltr' : 'rtl');
+            const currentDir = document.documentElement.getAttribute('dir') || 'ltr';
+            const newDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
+            document.documentElement.setAttribute('dir', newDir);
+            localStorage.setItem('dir', newDir);
+            updateRTLButtons(newDir);
         });
     });
 
