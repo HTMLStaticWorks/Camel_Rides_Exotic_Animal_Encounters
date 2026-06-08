@@ -61,8 +61,11 @@
     border-color: var(--border);
 }
 
+[data-theme="dark"] input[type="date"] {
+    color-scheme: dark !important;
+}
+
 [data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(1);
     cursor: pointer;
 }
 
